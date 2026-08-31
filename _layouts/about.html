@@ -1,0 +1,199 @@
+---
+layout: default
+---
+
+<div id="main" role="main">
+  <article class="toss-about">
+
+    <section class="toss-about__hero" aria-labelledby="about-title">
+      <div class="toss-about__portrait">
+        <img src="{{ '/assets/imgs/chulmin.jpg' | relative_url }}" alt="곽철민 프로필 사진">
+      </div>
+
+      <div class="toss-about__intro">
+        <span class="toss-about__eyebrow">Backend Engineer · Payment Domain</span>
+        <h1 id="about-title" class="toss-about__name">곽철민</h1>
+        <p class="toss-about__headline">결제와 정산 시스템을 만들고 운영하는 백엔드 개발자예요.</p>
+        <p class="toss-about__summary">
+          PG 연동, 포인트 충전, 쇼핑 결제, 정산 배치처럼 돈의 흐름이 정확해야 하는 시스템을 다뤄왔어요.
+          안정적인 트랜잭션 경계와 팀이 함께 이해할 수 있는 도메인 언어를 중요하게 생각해요.
+        </p>
+
+        <div class="toss-about__contact" aria-label="Contact links">
+          <a class="toss-about__contactItem" href="mailto:cmkxak@gmail.com">Email</a>
+          <a class="toss-about__contactItem" href="https://github.com/cmkxak" target="_blank" rel="noopener">GitHub</a>
+          <a class="toss-about__contactItem" href="https://cmkxak.github.io">Blog</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="toss-about__metrics" aria-label="Career summary">
+      <div class="toss-about__metric">
+        <strong>3년차</strong>
+        <span>백엔드 개발</span>
+      </div>
+      <div class="toss-about__metric">
+        <strong>결제·정산</strong>
+        <span>도메인 중심 경험</span>
+      </div>
+      <div class="toss-about__metric">
+        <strong>Spring</strong>
+        <span>Boot · Batch · JPA</span>
+      </div>
+      <div class="toss-about__metric">
+        <strong>PG 연동</strong>
+        <span>Nicepay · Danal 등</span>
+      </div>
+    </section>
+
+    <section class="toss-about__section toss-about__section--focus">
+      <div class="toss-about__sectionHead">
+        <span class="toss-about__sectionLabel">Focus</span>
+        <h2 class="toss-about__sectionTitle">제가 집중해온 일</h2>
+      </div>
+
+      <div class="toss-about__focusGrid">
+        <div class="toss-about__focusCard">
+          <span class="toss-about__focusIndex">01</span>
+          <h3>결제 흐름 설계와 운영</h3>
+          <p>포인트 충전, 쇼핑 결제, PG 승인/취소 연동처럼 사용자 돈이 오가는 흐름을 안정적으로 처리하는 일을 해왔어요.</p>
+        </div>
+        <div class="toss-about__focusCard">
+          <span class="toss-about__focusIndex">02</span>
+          <h3>정산과 배치 처리</h3>
+          <p>Spring Batch, MyBatis, Oracle 기반으로 정산 데이터를 처리하고, 운영 중 생기는 예외 케이스를 다루는 경험을 쌓았어요.</p>
+        </div>
+        <div class="toss-about__focusCard">
+          <span class="toss-about__focusIndex">03</span>
+          <h3>운영 환경에서의 문제 해결</h3>
+          <p>Linux, 온프레미스, 망분리 환경에서 배포와 장애 대응을 경험하며 현실적인 제약 안에서 답을 찾는 법을 배웠어요.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="toss-about__section">
+      <div class="toss-about__sectionHead">
+        <span class="toss-about__sectionLabel">Experience</span>
+        <h2 class="toss-about__sectionTitle">이력</h2>
+      </div>
+
+      <ol class="toss-about__timeline">
+        <li class="toss-about__exp toss-about__exp--current">
+          <div class="toss-about__expMeta">
+            <span class="toss-about__company">Hecto Financial</span>
+            <span class="toss-about__period">2025.11 — Present</span>
+          </div>
+          <h3 class="toss-about__roleTitle">Easy Cash Development Team</h3>
+          <p class="toss-about__expSummary">
+            마이통장 결제 서비스를 개발하고 운영하고 있어요. 결제 도메인에서 트랜잭션, 외부 연동, 운영 안정성을 더 깊게 다루고 있어요.
+          </p>
+          <ul class="toss-about__expList">
+            <li>마이통장 결제 서비스 유지보수 및 기능 개발</li>
+            <li>결제 흐름에서 발생하는 예외 케이스 분석과 개선</li>
+            <li>운영 이슈 대응과 코드 품질 개선</li>
+          </ul>
+        </li>
+
+        <li class="toss-about__exp">
+          <div class="toss-about__expMeta">
+            <span class="toss-about__company">Tmonet</span>
+            <span class="toss-about__period">2023.07 — 2025.11</span>
+          </div>
+          <h3 class="toss-about__roleTitle">Backend Developer · Staff</h3>
+          <p class="toss-about__expSummary">
+            모바일티머니 앱 안에서 포인트 충전, 쇼핑 결제, PG 연동, 정산 시스템을 개발하고 운영했어요.
+          </p>
+          <ul class="toss-about__expList">
+            <li>약 20만 MAU 규모 교통 앱의 포인트 충전/결제 시스템 <strong>댐댐</strong> 개발 및 운영</li>
+            <li>모바일티머니 앱 내 쇼핑 결제 시스템 개발 및 운영</li>
+            <li>Nicepay, Danal, Online Giftcard, OneStore, WincubeMall, COOCON, Daou Tech, PageOn 등 외부 PG/제휴사 연동</li>
+            <li>Spring Batch 4, MyBatis, Oracle 기반 정산 시스템 개발</li>
+            <li>내부 백오피스 기능 개선 및 운영 업무 대응</li>
+            <li>온프레미스, Linux, 망분리 환경에서의 개발/배포 경험</li>
+          </ul>
+        </li>
+
+        <li class="toss-about__exp">
+          <div class="toss-about__expMeta">
+            <span class="toss-about__company">User Insights</span>
+            <span class="toss-about__period">2022.06 — 2022.08</span>
+          </div>
+          <h3 class="toss-about__roleTitle">Service R&amp;D Team · Intern</h3>
+          <p class="toss-about__expSummary">
+            스마트팜 데이터를 다루는 웹 서비스를 만들며 도메인 분석, API 설계, 데이터 시각화를 경험했어요.
+          </p>
+          <ul class="toss-about__expList">
+            <li>Spring Boot와 Spring Data JPA 기반 스마트팜 데이터 시각화 웹 서비스 개발 참여</li>
+            <li>작물 데이터 제공을 위한 서버 API 설계 및 구현</li>
+            <li>Chart.js를 활용한 온도, 조도, 습도 데이터 시각화</li>
+          </ul>
+        </li>
+      </ol>
+    </section>
+
+    <section class="toss-about__section">
+      <div class="toss-about__sectionHead">
+        <span class="toss-about__sectionLabel">Stack</span>
+        <h2 class="toss-about__sectionTitle">기술 스택</h2>
+      </div>
+
+      <div class="toss-about__stack">
+        <div class="toss-about__stackGroup">
+          <h3>Backend</h3>
+          <p>Spring Framework, Spring Boot, Spring Batch, JPA, MyBatis, JUnit5, Mockito</p>
+        </div>
+        <div class="toss-about__stackGroup">
+          <h3>Database</h3>
+          <p>MySQL, Oracle</p>
+        </div>
+        <div class="toss-about__stackGroup">
+          <h3>Infra &amp; Tools</h3>
+          <p>AWS EC2, AWS S3, Docker, Git, GitHub, GitLab, Linux</p>
+        </div>
+        <div class="toss-about__stackGroup">
+          <h3>Language</h3>
+          <p>Java, Python, JavaScript</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="toss-about__section toss-about__section--split">
+      <div>
+        <div class="toss-about__sectionHead">
+          <span class="toss-about__sectionLabel">Education</span>
+          <h2 class="toss-about__sectionTitle">교육</h2>
+        </div>
+        <div class="toss-about__simpleList">
+          <article>
+            <strong>Jeonbuk National University</strong>
+            <span>Software Engineering · 2017.03 — 2023.08</span>
+            <p>전체 GPA 3.67 / 4.5, 전공 GPA 4.0 / 4.5</p>
+          </article>
+          <article>
+            <strong>Likelion Back-End School 2기</strong>
+            <span>2022.09 — 2023.02</span>
+            <p>Java, Spring Boot, JPA, SQL 기반 백엔드 과정을 수료했어요.</p>
+          </article>
+        </div>
+      </div>
+
+      <div>
+        <div class="toss-about__sectionHead">
+          <span class="toss-about__sectionLabel">Awards</span>
+          <h2 class="toss-about__sectionTitle">수상</h2>
+        </div>
+        <div class="toss-about__simpleList">
+          <article>
+            <strong>Capstone Design Competition · Bronze Prize</strong>
+            <span>Jeonbuk National University · 2022.06</span>
+          </article>
+          <article>
+            <strong>Undergraduate Paper Contest · Silver Prize</strong>
+            <span>Korea Information Technology Society · 2022.06</span>
+          </article>
+        </div>
+      </div>
+    </section>
+
+  </article>
+</div>
