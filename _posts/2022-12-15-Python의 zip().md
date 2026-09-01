@@ -7,6 +7,12 @@ toc_sticky: true
  
 date: 2022-12-15
 last_modified_at: 2022-12-15
+categories:
+  - Python
+tags:
+  - Python
+  - zip
+
 ---
 
 ## zip()

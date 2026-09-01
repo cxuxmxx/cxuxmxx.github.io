@@ -11,6 +11,7 @@ last_modified_at: 2026-08-31
 categories:
   - Spring
 tags:
+  - Java
   - Spring
   - Spring Boot
   - Transaction

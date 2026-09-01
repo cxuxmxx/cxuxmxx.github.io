@@ -4,9 +4,18 @@ excerpt: "Connection Pool과 DataSource는 무엇일까?"
 
 toc: true
 toc_sticky: true
- 
+
 date: 2025-10-18
 last_modified_at: 2025-10-18
+categories:
+  - Spring
+tags:
+  - Spring
+  - Database
+  - Connection Pool
+  - DataSource
+  - HikariCP
+
 ---
 
 

@@ -4,13 +4,22 @@ excerpt: "JDBC와 DriverManager 내용 정리"
 
 toc: true
 toc_sticky: true
- 
+
 date: 2022-12-16
 last_modified_at: 2025-10-18
+categories:
+  - Spring
+tags:
+  - Spring
+  - Java
+  - Database
+  - JDBC
+  - DriverManager
+
 ---
 
 ### 데이터베이스 연결
-- JDBC는 '자바 데이터베이스 연결(Java Database Connectivity)'의 약자로, 자바 애플리케이션이 다양한 데이터베이스에 접속하고, SQL 쿼리를 실행하여 데이터를 다룰 수 있게 해주는 자바 API입니다. JDBC는 자바 프로그램과 데이터베이스 간의 연결, 데이터 조회, 업데이트, 삭제 등 상호작용을 표준화된 방식으로 제공하며, 각 데이터베이스에 맞는 JDBC 드라이버를 통해 통신합니다. 
+- JDBC는 '자바 데이터베이스 연결(Java Database Connectivity)'의 약자로, 자바 애플리케이션이 다양한 데이터베이스에 접속하고, SQL 쿼리를 실행하여 데이터를 다룰 수 있게 해주는 자바 API입니다. JDBC는 자바 프로그램과 데이터베이스 간의 연결, 데이터 조회, 업데이트, 삭제 등 상호작용을 표준화된 방식으로 제공하며, 각 데이터베이스에 맞는 JDBC 드라이버를 통해 통신합니다.
 - jdbc가 제공하는 DriverManager는 **라이브러리에 등록된 db 드라이버들을 관리**하고, **커넥션을 획득하는 기능**을 제공한다.
 - 커넥션이 필요하면 애플리케이션 로직에서 `DriverManager.getConnection()`을 호출한다.
 - DriverManager는 라이브러리에 등록된 드라이버 목록을 자동으로 인식한다. 이 드라이버들에게 순차적으로 정보를 넘겨 커넥션을 획득할 수 있는지 확인한다.

@@ -7,6 +7,13 @@ toc_sticky: true
  
 date: 2022-12-16
 last_modified_at: 2022-12-16
+categories:
+  - Python
+tags:
+  - Python
+  - Hash
+  - Dictionary
+
 ---
 
 ## 해시(Hash)
