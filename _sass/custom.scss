@@ -2397,3 +2397,46 @@ a { color: inherit; text-decoration: none; }
     }
   }
 }
+
+// ====================================================
+//  TOSS INLINE CODE PILLS
+// ====================================================
+
+.page__content,
+.toss-article__content {
+  :not(pre) > code,
+  code.highlighter-rouge:not(pre code) {
+    display: inline-flex !important;
+    align-items: center !important;
+    min-height: 28px !important;
+    padding: 0 12px !important;
+    border: 0 !important;
+    border-radius: 999px !important;
+    background: #EAF2FE !important;
+    color: #3182F6 !important;
+    box-shadow: none !important;
+    font-family: inherit !important;
+    font-size: 0.86em !important;
+    font-weight: 700 !important;
+    line-height: 1 !important;
+    letter-spacing: 0 !important;
+    vertical-align: baseline !important;
+    white-space: nowrap !important;
+
+    &::before,
+    &::after {
+      content: none !important;
+    }
+  }
+}
+
+[data-theme="dark"] {
+  .page__content,
+  .toss-article__content {
+    :not(pre) > code,
+    code.highlighter-rouge:not(pre code) {
+      background: rgba(88, 166, 255, 0.16) !important;
+      color: var(--tg-blue) !important;
+    }
+  }
+}
