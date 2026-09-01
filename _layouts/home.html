@@ -28,14 +28,19 @@ layout: archive
   {% assign popular_posts = posts | slice: 0, 5 %}
 {% endif %}
 
-{% comment %} Build unique category list for filter chips, drop empty/General {% endcomment %}
+{% comment %} Build unique category list for filter chips, normalizing legacy keyword labels {% endcomment %}
 {% assign all_categories = '' | split: '' %}
 {% for post in posts %}
   {% for cat in post.categories %}
-    {% assign cat_lower = cat | downcase %}
-    {% unless cat_lower == 'general' or cat == '' %}
-      {% unless all_categories contains cat %}
-        {% assign all_categories = all_categories | push: cat %}
+    {% assign cat_name = cat | strip %}
+    {% assign cat_lower = cat_name | downcase %}
+    {% if cat_lower == 'spring db' or cat_lower == 'spring-db' or cat_lower == 'spring database' %}
+      {% assign cat_name = 'Spring' %}
+      {% assign cat_lower = 'spring' %}
+    {% endif %}
+    {% unless cat_lower == 'general' or cat_name == '' %}
+      {% unless all_categories contains cat_name %}
+        {% assign all_categories = all_categories | push: cat_name %}
       {% endunless %}
     {% endunless %}
   {% endfor %}
@@ -60,13 +65,21 @@ layout: archive
 
       <ul class="toss-list" id="toss-list">
         {% for post in postlist %}
-          {% assign post_cat = post.categories | first %}
-          {% assign cat_lower = post_cat | downcase %}
-          {% if cat_lower == 'general' %}
-            {% assign post_cat = nil %}
-          {% endif %}
+          {% assign normalized_categories = '' | split: '' %}
+          {% for cat in post.categories %}
+            {% assign cat_name = cat | strip %}
+            {% assign cat_lower = cat_name | downcase %}
+            {% if cat_lower == 'spring db' or cat_lower == 'spring-db' or cat_lower == 'spring database' %}
+              {% assign cat_name = 'Spring' %}
+              {% assign cat_lower = 'spring' %}
+            {% endif %}
+            {% unless cat_lower == 'general' or cat_name == '' %}
+              {% assign normalized_categories = normalized_categories | push: cat_name %}
+            {% endunless %}
+          {% endfor %}
+          {% assign post_cat = normalized_categories | first %}
 
-          <li class="toss-list__item" data-categories="{{ post.categories | join: ',' | downcase }}">
+          <li class="toss-list__item" data-categories="{{ normalized_categories | join: ',' | downcase }}">
             <a class="toss-list__link" href="{{ post.url | relative_url }}">
               <div class="toss-list__pills">
                 {% if post_cat %}
